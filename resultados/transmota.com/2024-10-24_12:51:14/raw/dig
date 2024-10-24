@@ -1,0 +1,20 @@
+
+; <<>> DiG 9.20.2-1-Debian <<>> transmota.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43779
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;transmota.com.			IN	A
+
+;; ANSWER SECTION:
+transmota.com.		21600	IN	A	82.223.28.240
+
+;; Query time: 28 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8) (UDP)
+;; WHEN: Thu Oct 24 12:51:15 EDT 2024
+;; MSG SIZE  rcvd: 58
+
