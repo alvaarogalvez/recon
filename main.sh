@@ -4,7 +4,7 @@
 figlet -f slant suprimoware
 
 # Comprobar si se pasó un argumento
-./reset.sh
+
 if [ -z "$1" ]; then
     echo "Error: No enviaste un dominio"
     echo "Uso: ./main.sh <dominio>"
