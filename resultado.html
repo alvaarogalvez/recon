@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.2/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.2/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.2/dist/index.js"></script><script>((r) => {
+            setTimeout(r);
+          })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"consum.es","children":[{"content":"Infraestructura","children":[{"content":"NS","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"3,4"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"4,5"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"5,6"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"6,7"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"7,8"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"8,9"}}],"payload":{"lines":"2,3"}},{"content":"IP","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"11,12"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"12,13"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"13,14"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"14,15"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"15,16"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"16,17"}}],"payload":{"lines":"10,11"}},{"content":"MX","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"19,20"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"20,21"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"21,22"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"22,23"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"23,24"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"24,25"}}],"payload":{"lines":"18,19"}},{"content":"TXT","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"27,28"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"28,29"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"29,30"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"30,31"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"31,32"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"32,33"}}],"payload":{"lines":"26,27"}},{"content":"CNAME","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"35,36"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"36,37"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"37,38"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"38,39"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"39,40"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"40,41"}}],"payload":{"lines":"34,35"}},{"content":"SRV","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"43,44"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"44,45"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"45,46"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"46,47"}}],"payload":{"lines":"42,43"}},{"content":"AAAA","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"49,50"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"50,51"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"51,52"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"52,53"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"53,54"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"54,55"}}],"payload":{"lines":"48,49"}},{"content":"SOA","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"57,58"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"58,59"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"59,60"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"60,61"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"61,62"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"62,63"}}],"payload":{"lines":"56,57"}},{"content":"DMARC","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"65,66"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"66,67"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"67,68"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"68,69"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"69,70"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"70,71"}}],"payload":{"lines":"64,65"}},{"content":"DKIM","children":[{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"73,74"}},{"content":";; communications error to 8.8.8.8#53: timed out","children":[],"payload":{"lines":"74,75"}},{"content":";; communications error to 8.8.8.8#53: host unreachable","children":[],"payload":{"lines":"75,76"}},{"content":";; communications error to 1.1.1.1#53: host unreachable","children":[],"payload":{"lines":"76,77"}},{"content":";; communications error to 8.8.4.4#53: host unreachable","children":[],"payload":{"lines":"77,78"}},{"content":";; no servers could be reached","children":[],"payload":{"lines":"78,79"}}],"payload":{"lines":"72,73"}}],"payload":{"lines":"1,2"}}],"payload":{"lines":"0,1"}},null)</script>
+</body>
+</html>
