@@ -1,80 +1,22 @@
-# consum.es
+# tomtom-global.com
 ## Infraestructura
 ### NS
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
+#### dns4.p09.nsone.net.
+#### dns1.p09.nsone.net.
+#### dns2.p09.nsone.net.
+#### dns3.p09.nsone.net.
 
 ### IP
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
-
-### MX
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
+#### 185.5.122.154
 
 ### TXT
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
-
-### CNAME
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
-
-### SRV
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-
-### AAAA
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
+#### "xl8tp62s8qwz0bdjv4hhf9y1whq2mvs3"
+#### "identrust_validate=Cgyng0jYAQMdSOKNoU9TNszVUpOZfK1LfEJetCC4r8Ep"
+#### "v=spf1 -all"
 
 ### SOA
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
+#### dns1.p09.nsone.net. hostmaster.nsone.net. 1648037683 7200 3600 24796800 3600
 
-### DMARC
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
-
-### DKIM
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: timed out
-#### ;; communications error to 8.8.8.8#53: host unreachable
-#### ;; communications error to 1.1.1.1#53: host unreachable
-#### ;; communications error to 8.8.4.4#53: host unreachable
-#### ;; no servers could be reached
+### rangos_ripe
+#### 185.5.120.0 - 185.5.123.255
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#HACER OTRO BUCLE PARA HACER LOS RANGOS, GOWITNESS, MIRAR QUE SE CREAN BIEN LAS CARPETAS, IMPLEMENTA WHATWEB -i Y RANGOS BUSQUEDA, Hay que refinar amass y limpiarlo
 # Usar figlet para mostrar el nombre del script
 figlet -f slant suprimoware
 
@@ -40,7 +40,7 @@ mkdir -p "$ruta_resultados/clean"  # Crear carpeta para resultados procesados
 while IFS= read -r ip; do
     # Realizar un whois para cada IP y extraer el rango
     whois -b "$ip" | grep 'inetnum' | awk '{print $2, $3, $4}' >> "$ruta_resultados/clean/rangos_ripe"
-done < "$ruta_resultados/clean/IP"  # Leer las IPs desde el archivo
+done < "$ruta_resultados/clean/IP"  # Leer las IPs desde el archivo 
 
 #echo "Realizando whois"
 whois $dominio > "$ruta_resultados/raw/whois" &  # Obtener información WHOIS del dominio
@@ -48,7 +48,7 @@ whois $dominio > "$ruta_resultados/raw/whois" &  # Obtener información WHOIS de
 dig $dominio > "$ruta_resultados/raw/dig" &  # Obtener información detallada del dominio
 
 # Obtener los encabezados de la respuesta HTTP de manera paralela
-curl -I https://$dominio > "$ruta_resultados/raw/headers" &
+curl -sI https://$dominio > "$ruta_resultados/raw/headers" &
 
 # Filtrar y guardar el servidor en el archivo correspondiente
 {
@@ -59,14 +59,23 @@ curl -I https://$dominio > "$ruta_resultados/raw/headers" &
 # Realizar un escaneo de puertos con nmap
 sudo nmap -sS -Pn -sV -sC -O -vv --open --reason --min-hostgroup 16 --min-rate 100 --max-parallelism=10 -F -oA "$ruta_resultados/raw/nmap" &> /dev/null &
 
-# herramientas
-ctfr -d $dominio -o "$ruta_resultados/raw/ctfr_raw.txt" &> /dev/null &
-katana -u $dominio -o "$ruta_resultados/raw/katana_raw.txt" &> /dev/null &
-gau $dominio --o "$ruta_resultados/raw/gau_raw.txt" &> /dev/null &
+# Herramientas
+#python scrapping-asn.py $dominio | sed '1,2d;$d;$d' > "$ruta_resultados/clean/ASN"
+ctfr -d $dominio -o "$ruta_resultados/raw/ctfr_raw" &> /dev/null &
+katana -u $dominio -o "$ruta_resultados/raw/katana_raw" &> /dev/null &
+gau $dominio --o "$ruta_resultados/raw/gau_raw" &> /dev/null &
+#amass enum -d $dominio -o "$ruta_resultados/raw/amass_raw" &> /dev/null & 
 wait  # Esperar a que terminen los escaneos
 
-# Unificar resultados en limpio sin duplicados y ordenado
-cat "$ruta_resultados/raw/ctfr_raw.txt" "$ruta_resultados/raw/katana_raw.txt" "$ruta_resultados/raw/gau_raw.txt" | sort -u > "$ruta_resultados/clean/unified_results.txt"
+
+#if [[ -s "$ruta_resultados/raw/ctfr_raw" || -s "$ruta_resultados/raw/katana_raw" || -s "$ruta_resultados/raw/gau_raw" ]]; then
+#    cat "$ruta_resultados/raw/ctfr_raw" "$ruta_resultados/raw/katana_raw" "$ruta_resultados/raw/gau_raw" | sort -u | httpx -silent -o "$ruta_resultados/clean/resultados_tools" &> /dev/null
+#else
+#    echo "No se encontraron resultados para unificar."
+#fi
+
+# Unificar resultados en limpio sin duplicados y ordenado, validando URLs con httpx
+cat "$ruta_resultados/raw/ctfr_raw" "$ruta_resultados/raw/katana_raw" "$ruta_resultados/raw/gau_raw" | sort -u | httpx -silent -o "$ruta_resultados/clean/resultados_tools" &> /dev/null
 
 # Revisar y eliminar archivos vacíos en la carpeta /clean
 for file in "$ruta_resultados/clean"/*; do
